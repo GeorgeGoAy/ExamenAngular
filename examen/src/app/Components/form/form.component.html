@@ -1,0 +1,40 @@
+<form [formGroup]="formExamen">
+   <mat-form-field>
+        <mat-label>first:</mat-label>
+        <input matInput [formControl]="first">
+        <mat-error>first requerido..</mat-error>
+    </mat-form-field>
+
+    <mat-form-field>
+        <mat-label>last:</mat-label>
+        <input matInput [formControl]="last">
+        <mat-error>last requerido..</mat-error>
+    </mat-form-field>
+
+    <mat-form-field>
+        <mat-label>email:</mat-label>
+        <input type="email" matInput [formControl]="email">
+        <mat-error>email requerida..</mat-error>
+    </mat-form-field>
+
+    <mat-form-field>
+        <mat-label>address:</mat-label>
+        <input matInput [formControl]="address">
+        <mat-error>address requerido..</mat-error>
+    </mat-form-field>
+
+    <mat-form-field>
+        <mat-label>created:</mat-label>
+        <input matInput [formControl]="created">
+        <mat-error>created requerido..</mat-error>
+    </mat-form-field>
+
+    <mat-form-field>
+        <mat-label>balance:</mat-label>
+        <input matInput [formControl]="balance">
+        <mat-error>balance requerido..</mat-error>
+    </mat-form-field>
+
+    <button class="btn-send" mat-raised-button color="primary" [disabled]="formExamen.invalid"  (click)="saveRegister()">Guardar</button>
+</form>
+
